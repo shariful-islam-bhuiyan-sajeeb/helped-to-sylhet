@@ -1,48 +1,370 @@
-body{
-    font-family: 'Oswald', sans-serif;
-        font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.background-image{
-    width: 100vw;
-    height:100vh;
-    position: relative;
-    background-image: url(images/donation13.jpg);
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/** section title and description css start here **/
+
+.section-titleDesc-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-desc {
+    width: 550px;
+    color: #575757;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/** section title and description css end here **/
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 80%),
+        url(images/donation13.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
-.text-style{
-    width: 100%;
-    height: 100%;
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
+
+.flood-text-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flood-text-wrapper h1 {
+    width: 750px;
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.flood-text-wrapper p {
+    width: 600px;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.donate-button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #ff5959;
+    text-transform: capitalize;
+}
+
+.donate-button:hover {
+    background-color: #d64a4a;
+    cursor: pointer;
+}
+
+/* Donate Today area css start here */
+
+.donate-today {
+    margin: 100px 0;
+}
+
+.donate-today-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.make-donate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate-amount-wrapper {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.donate-amount {
+    padding: 40px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    background: rgb(247, 244, 244);
+}
+
+.donate-amount.active {
+    border: 2px solid #ff5959;
+    background-color: #ff59592a;
+}
+
+.donate-amount.active h2 {
+    color: #ff5959;
+}
+
+.donate-amount h2 {
+    color: #575757;
+}
+
+.send-donate input {
+    width: 600px;
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc5c5;
+}
+
+.send-donate input::placeholder {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Donate Today area css end here */
+
+/* Donate plan css start here */
+
+.donate-plan-wrapper {
+    display: flex;
+    gap: 3%;
+    margin: 40px 0;
+    justify-content: center;
+}
+
+.donate-card {
+    width: 28%;
+    padding: 50px 25px;
+}
+
+.donate-card:nth-child(1) {
+    background-color: #edf5f6;
+}
+
+.donate-card:nth-child(2) {
+    background-color: #ffeeee;
+}
+
+.donate-card:nth-child(3) {
+    background-color: #fff4d6;
+}
+
+.donate-card img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.donate-card h2 {
+    margin-bottom: 20px;
+}
+
+.donate-card p {
+    font-size: 1rem;
+    color: #575757;
+    font-weight: 400;
+    word-spacing: 1px;
+    line-height: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Donate plan css end here */
+
+/* Latest post css start here */
+.latest-post-wrapper {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lastest-post-expand {
+    width: 60%;
+    border-right: 1px solid #dddddd;
+}
+
+.latest-post {
+    margin: 20px 0;
+    display: flex;
+}
+
+.latest-post-short {
+    width: 40%;
+}
+
+.latest-post .post-image {
+    margin-right: 20px;
+}
+
+.latest-post .post-image img {
+    width: 250px;
+    height: 170px;
+    object-fit: cover;
+}
+
+.post-date {
+    color: #fd6d5e;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.post-date span {
+    color: #575757;
+}
+
+.post-body .post-title {
+    color: #220033;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.post-body .post-title:hover {
+    color: #ff980e;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.post-body .post-desc {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.post-body .continue-reading {
+    font-size: 16px;
+    color: #ff980e;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.latest-post-short ul li {
+    list-style: none;
+    margin: 25px 0;
+    padding: 10px 0;
+    line-height: 2rem;
+    border-bottom: 1px solid rgb(177, 168, 168);
+}
+
+.latest-post-short ul li a {
+    color: #220033;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Latest post css end here */
+
+/* Get My update css start here */
+
+.my-updates {
+    margin: 80px 0;
+}
+
+.form-wrapper {
+    width: 750px;
+    margin: 0 auto;
+    padding: 70px 0;
+    background-color: #fff4d6;
+}
+
+.input-wrapper {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)
 }
-.link-button{
-    text-decoration: none;
-    background-image: linear-gradient(red, tomato);
-    padding: 10px 40px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 700;
+
+.input-wrapper input {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: #d9d9d9;
+    border-radius: 5px 0 0 5px;
 }
-.donate-amount{
-display: flex;
-margin-top: 80px;
-font-size: 24px;
-justify-content: center;
-    flex-direction: column;
-    align-items: center;
+
+.input-wrapper input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: "Open Sans", sans-serif;
 }
-.text-center{
+
+.input-wrapper button {
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 0 5px 5px 0;
+    background-color: #ff5959;
+    font-family: "Open Sans", sans-serif;
+}
+
+.input-wrapper button:hover {
+    background-color: #d64a4a;
+    cursor: pointer;
+}
+
+/* Get My update css end here */
+
+/* Footer section css start here*/
+
+footer {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #000000;
+}
+
+footer h2 {
+    font-size: 2rem;
+    color: #ff5959;
+    padding-bottom: 20px;
     text-align: center;
+    font-family: "Courgette", cursive;
 }
-.taka{
-    display: flex;
-    padding: 10px;
-    margin: 40px;
-    word-spacing: 5px;
+
+footer p {
+    color: rgb(185, 177, 177);
+    text-align: center;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
 }
+
+/* Footer section css end here*/
